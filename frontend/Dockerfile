@@ -14,8 +14,8 @@ COPY package.json pnpm-lock.yaml ./
 ENV NODE_ENV=development
 
 # Install dependencies
-# RUN pnpm install
-RUN npm install
+RUN pnpm install
+# RUN npm install
 
 # Copy the rest of your app
 COPY . .
@@ -24,6 +24,6 @@ COPY . .
 EXPOSE 3001
 
 # Start Nuxt in dev mode
-# CMD ["pnpm", "dev"]
+CMD ["pnpm", "dev"]
 # CMD ["pnpm", "exec", "nuxt", "dev"]
-CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "dev"]

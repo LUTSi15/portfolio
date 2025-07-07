@@ -8,6 +8,7 @@ services:
       - '3001:3001'
     volumes:
       - ./frontend:/app
+      - node_modules:/app/node_modules
     networks:
       - app-network
     environment:
@@ -49,6 +50,7 @@ services:
 
 volumes:
   mysql-data:
+  node_modules:
 
 networks:
   app-network:
